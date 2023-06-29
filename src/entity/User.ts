@@ -1,25 +1,28 @@
-import { Entity, Column, PrimaryGeneratedColumn,Timestamp } from 'typeorm'
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm'
 
 @Entity()
 export class User {
-    @PrimaryGeneratedColumn()
-    id:number
+  @PrimaryGeneratedColumn()
+  id: number
 
-    @Column()
-    name:string
+  @Column()
+  uid: number
 
-    @Column()
-    age!:number
+  @Column()
+  name: string
 
-    @Column()
-    address!:string
+  @Column()
+  age!: number
 
-    @Column()
-    email!:string
+  @Column()
+  address!: string
 
-    @Column()
-    school!:string
+  @Column()
+  email!: string
 
-    @Column({type:'timestamp'})
-    createAt :Timestamp | number
+  @Column()
+  school!: string
+
+  @Column({ type: 'bigint' })
+  createAt: number
 }
